@@ -4,12 +4,8 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "type": "npm",
-      "script": "build",
-      "path": "packages/ctt/",
-      "problemMatcher": [
-        "$tsc"
-      ]
+      "type": "shell",
+      "command": "make build"
     }
   ]
 }
