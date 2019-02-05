@@ -1,4 +1,4 @@
-# CTT: Classes & Types Together
+# CTT: Classes Type-checked by TypeScript
 
 ## Benefits
 
@@ -7,12 +7,28 @@
   - No CSS-in-JS.
   - No dynamically inserted `<style>` elements.
   - No CSS injection attacks.
+  - Supports `@media` queries, `:hover`, `:focus` — no JavaScript
 - Handle breakpoints easily: `sm() md() lg()`
 - Handle hover and focus states: `hover() focus()`
 - Reusable building blocks for your components.
 - Autocompletion and type-checking with TypeScript.
 
 ## Example with TailwindCSS
+
+### Compose multiple classes with type-safety
+
+```ts
+import { ctt } from "ctt";
+import { text, font, bg, p } from "ctt-tailwind";
+
+const className = ctt(
+  text("center", "lg", "purple-dark"),
+  font("sans")
+  bg("white"),
+  p(4)
+);
+// "text-center text-lg text-purple-dark font-sans bg-white p-4"
+```
 
 ### Handle hover states
 
@@ -37,7 +53,7 @@ const makeButtonClass = (isPrimary: boolean) => ctt(
 );
 
 makeButtonClass(true); // "bg-primary hover:bg-primary-light"
-makeButtonClass(true); // "bg-white hover:bg-grey-lightest"
+makeButtonClass(false); // "bg-white hover:bg-grey-lightest"
 ```
 
 
