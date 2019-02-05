@@ -22,7 +22,7 @@
   },
   "scripts": {
     "test": "jest",
-    "build": "microbundle -i src/index.ts"
+    "build": "microbundle -i src/index.ts --name CTSS"
   },
   "author": "Patrick Smith <patrick@burntcaramel.com>",
   "license": "MIT"
