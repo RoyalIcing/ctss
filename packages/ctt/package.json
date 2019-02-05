@@ -1,0 +1,21 @@
+{
+  "name": "ctt",
+  "version": "1.0.0",
+  "description": "Functional CSS classes meet TypeScript",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-typescript": "^7.1.0",
+    "@types/jest": "^23.3.13",
+    "babel-jest": "^24.0.0",
+    "jest": "^24.0.0",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.3.1"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "MIT"
+}
