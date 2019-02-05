@@ -6,7 +6,7 @@
 - Use static CSS.
   - No CSS-in-JS.
   - No dynamically inserted `<style>` elements.
-  - No CSS injection attacks.
+  - No [CSS injection attacks.](https://frontarm.com/james-k-nelson/how-can-i-use-css-in-js-securely/)
   - Supports `@media` queries, `:hover`, `:focus` — no JavaScript
 - Handle breakpoints easily: `sm() md() lg()`
 - Handle hover and focus states: `hover() focus()`
