@@ -1,10 +1,16 @@
-export function ctss<Name extends string>(...arrayOfNames: Array<Array<Name>>): string {
+type Ignorables = null | undefined | false;
+
+export function ctss<Name extends string>(...arrayOfNames: Array<Array<Name | Ignorables> | Ignorables>): string {
   const flat: Array<string> = [];
 
   arrayOfNames.forEach(names => {
-    names.forEach(name => {
-      flat.push(name as string);
-    });
+    if (names) {
+      names.forEach(name => {
+        if (name) {
+          flat.push(name as string);
+        }
+      });
+    }
   });
 
   return flat.join(" ");
