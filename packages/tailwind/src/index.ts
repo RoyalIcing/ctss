@@ -10,7 +10,7 @@ export type CanActive = string & {
   startsWith(searchString: "active:"): false;
 };
 export type Breakpointable = string & {
-  startsWith(searchString: "sm:" | "md:" | "lg:"): false;
+  startsWith(searchString: "sm:" | "md:" | "lg:" | "xl:"): false;
 };
 export type Base = CanHover & CanFocus & CanActive & Breakpointable;
 
@@ -28,6 +28,10 @@ export function md(...arrayOfSuffixes: Array<Array<Breakpointable>>): Array<stri
 
 export function lg(...arrayOfSuffixes: Array<Array<Breakpointable>>): Array<string> {
   return addPrefixToMany(arrayOfSuffixes as Array<Array<string>>, "lg:");
+}
+
+export function xl(...arrayOfSuffixes: Array<Array<Breakpointable>>): Array<string> {
+  return addPrefixToMany(arrayOfSuffixes as Array<Array<string>>, "xl:");
 }
 
 export function hover(...arrayOfSuffixes: Array<Array<CanHover>>): Array<Breakpointable> {
