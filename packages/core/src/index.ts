@@ -1,4 +1,4 @@
-export function ctt<Name extends string>(...arrayOfNames: Array<Array<Name>>): string {
+export function ctss<Name extends string>(...arrayOfNames: Array<Array<Name>>): string {
   const flat: Array<string> = [];
 
   arrayOfNames.forEach(names => {

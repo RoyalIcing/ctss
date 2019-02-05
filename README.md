@@ -57,6 +57,15 @@ makeButtonClass(false); // "bg-white hover:bg-grey-lightest"
 ```
 
 
+## @ctss/core
+
+Core currently has two functions.
+
+```ts
+export function ctt<Name extends string>(...arrayOfNames: Array<Array<Name>>): string;
+export function addPrefixToMany(arrayOfSuffixes: Array<Array<string>>, prefix: string): Array<string>;
+```
+
 ## Functions
 
 - bg:background color `bg("white") // bg-white`
@@ -70,3 +79,7 @@ makeButtonClass(false); // "bg-white hover:bg-grey-lightest"
 - flex: `flex("row") // flex flex-row` `flex(1) // flex-1`
 - items: `items("center") // items-center`
 - justify: `justify("start") // justify-start`
+
+## Further Reading
+
+- [In defense of Functional CSS](https://www.mikecr.it/ramblings/functional-css/)
