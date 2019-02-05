@@ -1,4 +1,4 @@
-import { ctt, md, hover, focus, bg, mx } from "./compose";
+import { ctt, md, hover, focus, bg, mx } from ".";
 
 describe("ctt", () => {
   test("bg with hover, focus, md", () => {

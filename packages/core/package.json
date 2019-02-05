@@ -1,8 +1,14 @@
 {
-  "name": "ctt",
+  "name": "@ctss/core",
   "version": "1.0.0",
   "description": "Functional CSS classes meet TypeScript",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "module": "dist/index.mjs",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -10,12 +16,14 @@
     "@types/jest": "^23.3.13",
     "babel-jest": "^24.0.0",
     "jest": "^24.0.0",
+    "microbundle": "^0.9.0",
     "ts-jest": "^23.10.5",
     "typescript": "^3.3.1"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "microbundle -i src/index.ts"
   },
-  "author": "",
+  "author": "Patrick Smith <patrick@burntcaramel.com>",
   "license": "MIT"
 }

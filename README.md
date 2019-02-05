@@ -1,4 +1,4 @@
-# CTT: Classes Type-checked by TypeScript
+# CTSS: Composable TypeScript Styles
 
 ## Benefits
 
@@ -18,10 +18,10 @@
 ### Compose multiple classes with type-safety
 
 ```ts
-import { ctt } from "ctt";
-import { text, font, bg, p } from "ctt-tailwind";
+import { ctss } from "ctss";
+import { text, font, bg, p } from "ctss-tailwind";
 
-const className = ctt(
+const className = ctss(
   text("center", "lg", "purple-dark"),
   font("sans")
   bg("white"),
@@ -33,7 +33,7 @@ const className = ctt(
 ### Handle hover states
 
 ```ts
-const className = ctt(
+const className = ctss(
   bg("white"),
   hover(
     bg("red")
@@ -45,7 +45,7 @@ const className = ctt(
 ### Dynamically change based on variables
 
 ```ts
-const makeButtonClass = (isPrimary: boolean) => ctt(
+const makeButtonClass = (isPrimary: boolean) => ctss(
   isPrimary ? bg("primary") : bg("white"),
   hover(
     isPrimary ? bg("primary-light") : bg("grey-lightest")

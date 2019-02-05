@@ -1,0 +1,30 @@
+{
+  "name": "@ctss/tailwind",
+  "version": "0.1.0",
+  "description": "TypeScript functions for Tailwind",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "module": "dist/index.mjs",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-typescript": "^7.1.0",
+    "@types/jest": "^23.3.13",
+    "babel-jest": "^24.0.0",
+    "jest": "^24.0.0",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.3.1"
+  },
+  "peerDependencies": {
+    "@ctss/core": "^1.0.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Patrick Smith <patrick@burntcaramel.com>",
+  "license": "MIT"
+}
