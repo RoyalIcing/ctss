@@ -1,4 +1,4 @@
-import { addPrefixToMany } from "ctt";
+import { addPrefixToMany } from "@ctss/core";
 
 export type Hoverable = string & {
   startsWith(searchString: "hover:"): false;

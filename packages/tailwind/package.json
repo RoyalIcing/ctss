@@ -16,6 +16,7 @@
     "@types/jest": "^23.3.13",
     "babel-jest": "^24.0.0",
     "jest": "^24.0.0",
+    "microbundle": "^0.9.0",
     "ts-jest": "^23.10.5",
     "typescript": "^3.3.1"
   },
@@ -23,7 +24,8 @@
     "@ctss/core": "^1.0.0"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "microbundle -i src/index.ts --globals @ctss/core=CTSS"
   },
   "author": "Patrick Smith <patrick@burntcaramel.com>",
   "license": "MIT"
