@@ -1,9 +1,9 @@
-import { ctt } from "ctt";
-import { md, hover, focus, bg, mx } from "./compose";
+import { ctss } from "@ctss/core";
+import { md, hover, focus, bg, mx } from "./index";
 
 describe("ctt", () => {
   test("bg with hover, focus, md", () => {
-    expect(ctt(
+    expect(ctss(
       bg("white"),
       hover(
         bg("black")
@@ -25,35 +25,35 @@ describe("ctt", () => {
 
   describe("mx", () => {
     test("one argument", () => {
-      expect(ctt(mx(1))).toEqual("mx-1");
+      expect(ctss(mx(1))).toEqual("mx-1");
     });
   
     test("two arguments", () => {
-      expect(ctt(mx(2, 4))).toEqual("ml-2 mr-4");
+      expect(ctss(mx(2, 4))).toEqual("ml-2 mr-4");
     });
   
     test("two arguments, first null", () => {
-      expect(ctt(mx(null, 2))).toEqual("mr-2");
+      expect(ctss(mx(null, 2))).toEqual("mr-2");
     });
   
     test("two arguments, second null", () => {
-      expect(ctt(mx(2, null))).toEqual("ml-2");
+      expect(ctss(mx(2, null))).toEqual("ml-2");
     });
   
     test("one argument with breakpoint", () => {
-      expect(ctt(mx(2), md(mx(4)))).toEqual("mx-2 md:mx-4");
+      expect(ctss(mx(2), md(mx(4)))).toEqual("mx-2 md:mx-4");
     });
   
     test("two arguments and breakpoint with one", () => {
-      expect(ctt(mx(2, 3), md(mx(4)))).toEqual("ml-2 mr-3 md:mx-4");
+      expect(ctss(mx(2, 3), md(mx(4)))).toEqual("ml-2 mr-3 md:mx-4");
     });
   
     test("two arguments and breakpoint with two", () => {
-      expect(ctt(mx(2, 3), md(mx(4, 3)))).toEqual("ml-2 mr-3 md:ml-4 md:mr-3");
+      expect(ctss(mx(2, 3), md(mx(4, 3)))).toEqual("ml-2 mr-3 md:ml-4 md:mr-3");
     });
   
     test("one argument and breakpoint with two", () => {
-      expect(ctt(mx(2), md(mx(4, 3)))).toEqual("mx-2 md:ml-4 md:mr-3");
+      expect(ctss(mx(2), md(mx(4, 3)))).toEqual("mx-2 md:ml-4 md:mr-3");
     });
   });
 });
