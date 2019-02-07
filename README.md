@@ -3,17 +3,18 @@
 ## Benefits
 
 - Compatible with React, Vue, Preact — anywhere class names are supported.
-- Use static CSS.
-  - No CSS-in-JS.
+- Use static CSS, and _not_ CSS-in-JS.
   - No dynamically inserted `<style>` elements.
   - No [CSS injection attacks.](https://frontarm.com/james-k-nelson/how-can-i-use-css-in-js-securely/)
-  - Supports `@media` queries, `:hover`, `:focus` — no JavaScript
-- Handle breakpoints easily: `sm() md() lg()`
-- Handle hover and focus states: `hover() focus()`
-- Reusable building blocks for your components.
-- Autocompletion and type-checking with TypeScript.
+  - Supports `@media` queries, `:hover`, `:focus`, `:active` — without JavaScript
+- Handle breakpoints easily: `sm() md() lg() xl()`
+- Handle hover and focus states: `hover() focus() active()`
+- Reusable atomic building blocks for your components.
+- Autocompletion and type-safety with TypeScript.
 
-## Example with TailwindCSS
+## Example
+
+(With the provided [TailwindCSS functions](https://github.com/RoyalIcing/ctss/blob/master/packages/tailwind/README.md). You can bring your own too.)
 
 ### Compose multiple classes with type-safety
 
@@ -57,7 +58,7 @@ makeButtonClass(false); // "bg-white hover:bg-grey-lightest"
 ```
 
 
-## @ctss/core
+## Core package: @ctss/core
 
 Core currently has two functions.
 
@@ -65,20 +66,6 @@ Core currently has two functions.
 export function ctt<Name extends string>(...arrayOfNames: Array<Array<Name>>): string;
 export function addPrefixToMany(arrayOfSuffixes: Array<Array<string>>, prefix: string): Array<string>;
 ```
-
-## Functions
-
-- bg:background color `bg("white") // bg-white`
-- mx, my: margin `mx(4) // mx-4` `my(2, 4) // mt-2 mb-4` `mx("auto") // mx-auto` `mx(null, 2) // mr-2` `mx(8, null) // ml-8`
-- px, py: padding
-- text: `text("center", "lg", "red") text-center text-lg text-red`
-- font: `font("bold") // font-bold`
-- leading: `leading("tight")`
-- h: height `h(16) // h-16`
-- rounded: `rounded("full") // rounded-full`
-- flex: `flex("row") // flex flex-row` `flex(1) // flex-1`
-- items: `items("center") // items-center`
-- justify: `justify("start") // justify-start`
 
 ## Further Reading
 

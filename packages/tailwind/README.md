@@ -65,3 +65,31 @@ ctss(
 );
 // "bg-white hover:bg-black focus:bg-orange md:bg-red md:hover:bg-green md:focus:bg-yellow"
 ```
+
+## Functions
+
+- `bg`: background color
+  - `bg("white") // bg-white`
+- `mx`, `my`: margin
+  - `mx(4) // mx-4`
+  - `my(2, 4) // mt-2 mb-4`
+  - `mx("auto") // mx-auto`
+  - `mx(8, null) // ml-8`
+  - `mx(null, 2) // mr-2`
+- `px`, `py`: padding
+- `text`:
+  - `text("center", "lg", "red") // text-center text-lg text-red`
+- `font`: 
+  - `font("bold") // font-bold`
+- `leading`:
+  - `leading("tight")`
+- `h`: height 
+  - `h(16) // h-16`
+- `rounded`: border radius
+  - `rounded("full") // rounded-full`
+- `flex`:
+  - `flex("row") // flex flex-row` `flex(1) // flex-1`
+- `items`:
+  - `items("center") // items-center`
+- `justify`:
+  - `justify("start") // justify-start`
