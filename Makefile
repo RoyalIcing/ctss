@@ -9,6 +9,7 @@ publish-tailwind:
 .PHONY: test
 test:
 	cd packages/core && npm t
+	cd packages/tailwind && npm t
 
 .PHONY: build-core
 build-core:
