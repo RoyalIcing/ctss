@@ -1,3 +1,8 @@
+.PHONY:
+install:
+	cd packages/core && npm ci
+	cd packages/tailwind && npm ci
+
 .PHONY: publish-core
 publish-core:
 	cd packages/core && npm publish --access public
@@ -21,3 +26,8 @@ build-tailwind:
 
 .PHONY: build
 build: build-core build-tailwind
+
+.PHONY: ci
+ci:
+	make install
+	make test
