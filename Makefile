@@ -1,7 +1,7 @@
 .PHONY:
 install:
-	cd packages/core && npm ci
-	cd packages/tailwind && npm ci
+	cd packages/core && npm ci && npm link
+	cd packages/tailwind && npm ci && npm link @ctss/core
 
 .PHONY: publish-core
 publish-core:
