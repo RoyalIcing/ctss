@@ -1,4 +1,4 @@
-.PHONY:
+.PHONY: install
 install:
 	cd packages/core && npm ci && npm link
 	cd packages/tailwind && npm ci && npm link @ctss/core

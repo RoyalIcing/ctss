@@ -2,19 +2,19 @@
 
 ## Benefits
 
-- Compatible with React, Vue, Preact — anywhere class names are supported.
-- Use static CSS, and _not_ CSS-in-JS.
-  - No dynamically inserted `<style>` elements.
+- Works with React, Vue, Preact.
+- Use static CSS, _not_ CSS-in-JS.
+  - No dynamically inserted stylesheets.
   - No [CSS injection attacks.](https://frontarm.com/james-k-nelson/how-can-i-use-css-in-js-securely/)
-  - Supports `@media` queries, `:hover`, `:focus`, `:active` — without JavaScript
+  - No JavaScript event subscribers for `@media` queries, `:hover`, `:focus`, `:active`.
+- Autocompletion and type-safety with TypeScript — typos in class names are compile-time errors.
 - Handle breakpoints easily: `sm() md() lg() xl()`
 - Handle hover and focus states: `hover() focus() active()`
 - Reusable atomic building blocks for your components.
-- Autocompletion and type-safety with TypeScript.
 
-## Example
+## Example with TailwindCSS
 
-(With the provided [TailwindCSS functions](https://github.com/RoyalIcing/ctss/blob/master/packages/tailwind/README.md). You can bring your own too.)
+Using the our [TailwindCSS functions](https://github.com/RoyalIcing/ctss/blob/master/packages/tailwind/README.md). You can bring your own too.
 
 ### Compose multiple classes with type-safety
 
@@ -26,7 +26,7 @@ const className = ctss(
   text("center", "lg", "purple-dark"),
   font("sans")
   bg("white"),
-  p(4)
+  p("4")
 );
 // "text-center text-lg text-purple-dark font-sans bg-white p-4"
 ```
@@ -63,7 +63,8 @@ makeButtonClass(false); // "bg-white hover:bg-grey-lightest"
 Core currently has two functions.
 
 ```ts
-export function ctt<Name extends string>(...arrayOfNames: Array<Array<Name>>): string;
+export function ctss<Name extends string>(...arrayOfNames: Array<Array<Name>>): string;
+
 export function addPrefixToMany(arrayOfSuffixes: Array<Array<string>>, prefix: string): Array<string>;
 ```
 
