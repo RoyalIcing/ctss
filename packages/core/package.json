@@ -1,6 +1,6 @@
 {
   "name": "@ctss/core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Functional CSS classes meet TypeScript",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
