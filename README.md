@@ -69,4 +69,9 @@ export function addPrefixToMany(arrayOfSuffixes: Array<Array<string>>, prefix: s
 
 ## Further Reading
 
-- [In defense of Functional CSS](https://www.mikecr.it/ramblings/functional-css/)
+- [CSS Utility Classes and “Separation of Concerns”](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/)
+- [In Defense of Functional CSS](https://www.mikecr.it/ramblings/functional-css/)
+- [In Defense of Utility-First CSS](https://frontstuff.io/in-defense-of-utility-first-css)
+- [Shopify’s Polaris: Design Tokens](https://shopify.github.io/polaris-tokens/)
+- [Thumbtack’s Thumbprint: Color System](https://thumbprint.design/guide/product/color/)
+- [Salesforce’s Lightning: Design Tokens](https://www.lightningdesignsystem.com/design-tokens/)
